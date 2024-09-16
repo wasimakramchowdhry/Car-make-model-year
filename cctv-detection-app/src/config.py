@@ -8,7 +8,7 @@ VIDEO_FILE_PATH = "C:/Users/ACER/Downloads/Recording 2024-07-31 234255.mp4"  # P
 MODEL_PATH = 'data/models/'  # Path to models
 
 PLATE_RECOGNIZER_API_URL = "https://api.platerecognizer.com/v1/plate-reader/"
-PLATE_RECOGNIZER_API_KEY = "085832d60d320abec28b8a78cc71854ff13cf8c5"  
+PLATE_RECOGNIZER_API_KEY = "YOUR API KEY"  
 
 
 #DATABASE CREDENTIALS
