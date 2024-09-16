@@ -100,6 +100,42 @@ python src/models/train_classifier.py
 python run_app.py
 ```
 
+
+### Database Creation
+The SQL queries to create the database and table for the project, along with sample data insertion for storing car information, are as follows:
+```sql
+CREATE DATABASE station_db;
+USE station_db;
+```
+
+### Table Creation
+
+```sql
+CREATE TABLE car_info (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    car_plate VARCHAR(20) NOT NULL UNIQUE,
+    membership_status ENUM('gold', 'silver', 'bronze', 'none') DEFAULT 'none',
+    make VARCHAR(50),
+    model VARCHAR(50),
+    year INT,
+    color VARCHAR(50),
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+### Sample Data Insertion
+
+```sql
+INSERT INTO car_info (car_plate, membership_status, make, model, year, color) 
+VALUES
+('KA01AB1234', 'gold', 'Toyota', 'Camry', 2020, 'White'),
+('MH02CD5678', 'silver', 'Honda', 'Civic', 2019, 'Black'),
+('DL03EF9012', 'none', 'Ford', 'Elantra', 2018, 'Blue'),
+('MH47TC124', 'gold', 'Hyundai', 'SUV', 2021, 'Red');
+```
+
+This setup includes a table `car_info` that stores car information such as license plate number, membership status, car make, model, year, and color. The `id` is the primary key, and the `car_plate` field is set to be unique to avoid duplicates.
+
 ### Public Repositories for Datasets
 
 - [Roboflow - Car Class](https://universe.roboflow.com/project-vewd3/carclass)
