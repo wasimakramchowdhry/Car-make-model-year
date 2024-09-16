@@ -1,0 +1,28 @@
+# GPU-supported machine learning and deep learning libraries
+tensorflow #-gpu==2.17.0
+torch
+torchvision
+yolov5 #@ git+https://github.com/ultralytics/yolov5.git
+
+
+
+# Core libraries
+numpy
+Pillow
+tqdm
+joblib
+scikit-learn
+
+# Computer vision and face detection libraries
+opencv-python
+deepface
+pytesseract
+openalpr
+
+# Jupyter Notebook
+jupyter
+
+# Database and HTTP requests
+mysql-connector-python
+requests
+
